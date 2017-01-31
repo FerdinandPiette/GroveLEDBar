@@ -1,4 +1,3 @@
-#include "../Grove/Grove.h"
 #include "GroveLEDBar.h"
 
 GroveLEDBar::GroveLEDBar()
