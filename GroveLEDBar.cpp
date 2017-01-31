@@ -1,10 +1,8 @@
 #include "../Grove/Grove.h"
 #include "GroveLEDBar.h"
 
-GroveLEDBar::GroveLEDBar(GrovePin pins)
+GroveLEDBar::GroveLEDBar()
 {
-	this->_pinClock = pins.pin2;
-	this->_pinData = pins.pin1;
 	this->setGlobalBrightness(192);
 
 	for (unsigned char indexLED = 0; indexLED < 10; ++indexLED) {
@@ -12,7 +10,9 @@ GroveLEDBar::GroveLEDBar(GrovePin pins)
 	}
 }
 
-void GroveLEDBar::initialize() {	
+void GroveLEDBar::initialize(GrovePin pins) {
+	this->_pinClock = pins.pin2;
+	this->_pinData = pins.pin1;	
 	pinMode(this->_pinClock, OUTPUT);
 	pinMode(this->_pinData, OUTPUT);
 	this->refresh();

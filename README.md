@@ -5,13 +5,12 @@ LED Bar Library for Arduino + Grove shield
 
 ##Example
 ```c++
-#include <Grove.h>
 #include <GroveLEDBar.h>
 
-GroveLEDBar bar(GROVE_D6);
+GroveLEDBar bar;
 
 void setup() {
-  bar.initialize();
+  bar.initialize(GROVE_D6);
   bar.setGlobalBrightness(255);
 }
 
@@ -85,12 +84,12 @@ void loop() {
 ```
 
 ##Documentation
-###`GroveLEDBar(GrovePin pins)`
+
+###`void initialize(GrovePin pins)`
+Initialize the sensor before using it.
+
 Parameters:
 - `pins`: Must be a digital socket (GROVE_D2 to GROVE_D8)
-
-###`void initialize()`
-Initialize the sensor before using it.
 
 ###`void setGlobalBrightness(float brightness)`
 Change the brightness of all the LEDs

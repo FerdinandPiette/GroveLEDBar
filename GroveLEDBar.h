@@ -27,8 +27,8 @@ private:
 
 public:
 
-  GroveLEDBar(GrovePin pins);
-  void initialize();
+  GroveLEDBar();
+  void initialize(GrovePin pins);
   void setGlobalBrightness(float brightness); // 0-1
   void turnOnLED(unsigned char idLED);
   void turnOffLED(unsigned char idLED);
