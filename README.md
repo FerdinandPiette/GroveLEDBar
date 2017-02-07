@@ -15,11 +15,11 @@ void setup() {
 }
 
 void loop() {
-  bar.turnOffLEDs();
+  bar.turnOffAllLED();
   delay(1000);
-  bar.turnOnLEDs();
+  bar.turnOnAllLED();
   delay(1000);
-  bar.turnOffLEDs();
+  bar.turnOffAllLED();
   delay(1000);
   
   bar.turnOnLED(0);
@@ -33,7 +33,7 @@ void loop() {
   bar.turnOnLED(8);
   delay(500);
 
-  bar.toggleLEDs();
+  bar.toggleAllLED();
   delay(1500);
   
   bar.toggleLED(0);
